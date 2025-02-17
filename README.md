@@ -7,8 +7,8 @@
 </p>
 
 <p align="center">
-    <a href="https://t.me/rustlanguz"><img align="center" src="https://img.shields.io/badge/Chat-grey?style=flat&logo=telegram&logoColor=ffffff&labelColor=dea584&color=dea584" alt="Telegram Chat"></a>
-    <a href="https://github.com/rust-lang-uz/maydon/actions/workflows/test.yml"><img align="center" src="https://img.shields.io/github/actions/workflow/status/rust-lang-uz/maydon/test.yml?style=flat&logo=github&logoColor=ffffff&labelColor=dea584&color=dea584" alt="Test CI"></a>
+    <a href="https://t.me/rustlanguz"><img align="center" src="https://img.shields.io/badge/Chat-grey?style=flat&logo=telegram&logoColor=383636&labelColor=dea584&color=dea584" alt="Telegram Chat"></a>
+    <a href="https://github.com/rust-lang-uz/maydon/actions/workflows/test.yml"><img align="center" src="https://img.shields.io/github/actions/workflow/status/rust-lang-uz/maydon/test.yml?style=flat&logo=github&logoColor=383636&labelColor=dea584&color=dea584" alt="Test CI"></a>
 </p>
 
 ## Motivation
