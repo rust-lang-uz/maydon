@@ -1,20 +1,24 @@
 [package]
-name = "template"
+name = "maydon"
 version = "0.1.0"
 edition = "2021"
-homepage = "https://github.com/xinux-org/templates"
-repository = "https://github.com/xinux-org/templates"
-description = "Just a Rust template via nix flakes"
+homepage = "https://github.com/rust-lang-uz/maydon"
+repository = "https://github.com/rust-lang-uz/maydon"
+description = "Generating enumation for fields of a struct"
+authors = ["Sokhibjon Orzikulov <orzklv.uz>"]
+keywords = ["fields", "enum"]
+license = "MIT OR Apache-2.0"
+
+[lib]
+proc-macro = true
 
 # Dependencies that will included with final binary
 [dependencies]
+syn = { version = "2.0", features = ["derive", "full"] }
+quote = "1.0"
+proc-macro2 = "1.0"
+convert_case = "0.7.1"
 
 # Development dependencies which aren't used in release binary
 [dev-dependencies]
-
-# Optimize release binary as much as possible
-[profile.release]
-strip = true
-opt-level = "z"
-lto = true
-codegen-units = 1
+# trybuild = "1.0.103"
