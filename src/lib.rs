@@ -31,7 +31,7 @@ pub fn field_enum_derive(input: TokenStream) -> TokenStream {
     let fields = if let syn::Data::Struct(data_struct) = &input.data {
         &data_struct.fields
     } else {
-        panic!("FieldEnum can only be derived for structs");
+        panic!("Maydon can only be derived for structs");
     };
 
     let field_variants = fields.iter().map(|field| {
