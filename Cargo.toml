@@ -21,4 +21,4 @@ convert_case = "0.7.1"
 
 # Development dependencies which aren't used in release binary
 [dev-dependencies]
-# trybuild = "1.0.103"
+trybuild = "1.0.103"

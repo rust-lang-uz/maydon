@@ -1,7 +1,7 @@
 use maydon::Maydon;
 
 #[derive(Maydon)]
-#[name = "ConfigField"]
+#[field_name = "ConfigField"]
 pub struct Config {
     pub url: String,
     pub port: u16,

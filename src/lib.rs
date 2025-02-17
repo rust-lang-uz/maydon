@@ -5,7 +5,7 @@ use proc_macro::TokenStream;
 use quote::quote;
 use syn::{parse_macro_input, DeriveInput, Expr, Lit, Meta};
 
-#[proc_macro_derive(Maydon, attributes(name))]
+#[proc_macro_derive(Maydon, attributes(field_name))]
 pub fn field_enum_derive(input: TokenStream) -> TokenStream {
     let input = parse_macro_input!(input as DeriveInput);
 
@@ -14,7 +14,7 @@ pub fn field_enum_derive(input: TokenStream) -> TokenStream {
 
     // Parse attributes to extract custom enum name
     for attr in input.attrs.iter() {
-        if attr.path().is_ident("name") {
+        if attr.path().is_ident("field_name") {
             if let Ok(Meta::NameValue(name_value)) = attr.meta.clone().try_into() {
                 // Extract value from Meta::NameValue
                 if let Expr::Lit(expr_lit) = name_value.value {
@@ -56,4 +56,17 @@ pub fn field_enum_derive(input: TokenStream) -> TokenStream {
     };
 
     TokenStream::from(expanded)
+}
+
+#[cfg(test)]
+mod tests {
+    use trybuild::TestCases;
+
+    #[test]
+    fn test_macro() {
+        let t = TestCases::new();
+        t.pass("tests/basic.rs");
+        t.pass("tests/custom.rs");
+        t.compile_fail("tests/fail.rs");
+    }
 }
